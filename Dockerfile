@@ -27,10 +27,10 @@ RUN pipenv run pyinstaller --noconfirm --log-level=INFO \
 FROM redhat/ubi8-minimal AS runtime
 
 # Set the working directory to /app
-WORKDIR /app
+#WORKDIR /app
 
 # Copy the application code from the build stage
-COPY --from=build /app .
+COPY --from=build . .
 
 # Set the command to run when the container starts
 CMD ["ls", "-l", "/app"]
