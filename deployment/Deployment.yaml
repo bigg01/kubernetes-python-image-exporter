@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: prom-image-exporter
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: prom-image-exporter
+  template:
+    metadata:
+      labels:
+        app: prom-image-exporter
+    spec:
+      containers:
+      - name: prom-image-exporter
+        image: your-prom-image-exporter-image:latest
+        ports:
+        - containerPort: 8080
+        env:
+        - name: PROMETHEUS_URL
+          value: http://your-prometheus-url:9090
