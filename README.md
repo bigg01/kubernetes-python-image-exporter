@@ -1,6 +1,11 @@
 # kubernetes-python-image-exporter
 
-Python power :snake: to export images from a kubernetes cluster
+Categories: kubernetes, python, container, image, exporter
+
+Python power :snake: 
+
+- this *experimate* will show how easy you can write an container images exporte for a kubernetes cluster namespace.
+- additionally it will show how to create a binyary version of a python exporter :speedboat:
 
 ## setup for dev
 ```bash
@@ -11,7 +16,6 @@ make setup
 make build_bin
 ```
 ## run
-    :bangbang: creates a binary :speedboat: version of a python exporter !!! :-)
 ```bash
 make build_bin
 ```
